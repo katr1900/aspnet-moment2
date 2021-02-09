@@ -1,0 +1,23 @@
+﻿
+@{
+    decimal total = 0;
+}
+<h2>SeaFood</h2>
+<ul>
+    @foreach (var seafood in ViewBag.Seafoods)
+    {
+        total += seafood.Price;
+    <li>@seafood.Name</li>
+    }
+</ul>
+Totalt: @total
+
+<form asp-action="Seafood" asp-controller="Food">
+    <label>
+        <input type="text" name="Name" />
+    </label>
+    <label>
+        <input type="text" name="Price" />
+    </label>
+    <input type="submit" value="Save"/>
+</form>

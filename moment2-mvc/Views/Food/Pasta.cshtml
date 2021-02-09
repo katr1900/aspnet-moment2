@@ -1,0 +1,8 @@
+﻿
+@{
+    <h2>Pasta</h2>
+}
+@foreach(var pasta in ViewData["Pastas"] as List<Pasta>)
+{
+    @pasta.Name
+}
